@@ -35,6 +35,9 @@ def generate_sql(query: str) -> str:
     - student_data (roll_no, name, age, gender)
     - student_marks (roll_no, department, subject, marks)
     - student_address (roll_no, address, city, state)
+    Rules:
+    - Always use explicit table names for columns (e.g., student_data.roll_no).
+    - Always use JOIN syntax for combining tables.
     Query: '{query}'
     """
     response = cached_ollama_response(prompt)
